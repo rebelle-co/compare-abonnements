@@ -15,7 +15,11 @@ export default function ComparisonTable({ plans }: any) {
       <tbody>
         {plans.map((p: any) => (
           <tr key={p.id} className="text-center border-t">
-            <td>{p.name}</td>
+            <td>
+              <a href={`/service/${p.name.toLowerCase()}`}>
+                {p.name}
+              </a>
+            </td>
             <td>{p.price} €</td>
             <td>{p.quality}</td>
             <td>{p.screens}</td>
